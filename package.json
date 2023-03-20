@@ -7,10 +7,18 @@
     "lerna": "^6.5.1"
   },
   "workspaces": [
-    "packages/*"
+    "apps/*",
+    "packages/*",
+    "playgrounds/*"
   ],
+  "nohoist": ["**/react-native", "**/react-native/**"],
   "private": true,
   "scripts": {
-    "build": "yarn lerna run build"
+    "build": "yarn lerna run build",
+    "dev": "yarn lerna run dev",
+    "dev:mobile": "yarn workspace @playgrounds/react-native dev",
+    "dev:web": "yarn workspace @playgrounds/react dev",
+    "dev:storybook:web": "yarn workspace @yubi/storybook-web storybook",
+    "dev:storybook:mobile": "yarn workspace @yubi/storybook start"
   }
 }

@@ -16,21 +16,24 @@
     "packages/*",
     "playgrounds/*"
   ],
-  "nohoist": ["**/react-native", "**/react-native/**"],
+  "nohoist": [
+    "**/react-native",
+    "**/react-native/**"
+  ],
   "private": true,
   "scripts": {
     "build": "yarn lerna run build",
     "dev": "yarn lerna run dev",
+    "lint": "yarn lerna run lint",
+    "test": "yarn lerna run test",
+    "commit": "yarn git-cz",
     "dev:mobile": "yarn workspace @playgrounds/app-mobile dev",
     "dev:android": "yarn workspace @playgrounds/app-mobile android",
     "dev:ios": "yarn workspace @playgrounds/app-mobile ios",
     "dev:web": "yarn workspace @playgrounds/app-web dev",
     "dev:storybook:web": "yarn workspace @yubi/storybook-web storybook",
     "dev:storybook:mobile": "yarn workspace @yubi/storybook start",
-    "publish": "yarn lerna publish",
-    "commit": "yarn git-cz",
-    "test:chromatic": "yarn lerna run test:chromatic",
-    "build:storybook": "yarn build && yarn lerna run build-storybook"
+    "publish": "yarn test && yarn build && yarn lerna publish"
   },
   "config": {
     "commitizen": {
@@ -41,5 +44,12 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "bracketSameLine": true,
+    "trailingComma": "es5"
   }
 }

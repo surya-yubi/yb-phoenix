@@ -1,7 +1,7 @@
+import MyButton from '@yubi/button-example';
 import Head from 'next/head';
 
 import styles from '../styles/Home.module.css';
-import MyButton from "@yubi/button-example";
 
 export default function Home() {
   return (
@@ -13,9 +13,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-          <MyButton text={"Hello"} onPress={() => {
-              console.log("hello")
-          }}/>
+        <MyButton
+          text={'Hello'}
+          onPress={() => {
+            console.log('hello');
+          }}
+        />
       </main>
     </div>
   );

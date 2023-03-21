@@ -26,7 +26,11 @@
     "dev:ios": "yarn workspace @playgrounds/app-mobile ios",
     "dev:web": "yarn workspace @playgrounds/app-web dev",
     "dev:storybook:web": "yarn workspace @yubi/storybook-web storybook",
-    "dev:storybook:mobile": "yarn workspace @yubi/storybook start"
+    "dev:storybook:mobile": "yarn workspace @yubi/storybook start",
+    "publish": "yarn lerna publish",
+    "commit": "yarn git-cz",
+    "test:chromatic": "yarn lerna run test:chromatic",
+    "build:storybook": "yarn build && yarn lerna run build-storybook"
   },
   "config": {
     "commitizen": {

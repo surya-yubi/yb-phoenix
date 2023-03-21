@@ -4,7 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "lerna": "^6.5.1"
+    "lerna": "^6.5.1",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5"
   },
   "workspaces": [
     "apps/*",
@@ -17,8 +22,20 @@
     "build": "yarn lerna run build",
     "dev": "yarn lerna run dev",
     "dev:mobile": "yarn workspace @playgrounds/app-mobile dev",
+    "dev:android": "yarn workspace @playgrounds/app-mobile android",
+    "dev:ios": "yarn workspace @playgrounds/app-mobile ios",
     "dev:web": "yarn workspace @playgrounds/app-web dev",
     "dev:storybook:web": "yarn workspace @yubi/storybook-web storybook",
     "dev:storybook:mobile": "yarn workspace @yubi/storybook start"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

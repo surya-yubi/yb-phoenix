@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "expo start",
     "lint": "eslint --ext js,ts,tsx .",
-    "build": "expo export --output-dir ./build --platform all",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -23,6 +22,7 @@
     "react-native-web": "~0.18.12"
   },
   "devDependencies": {
+    "@yubi/eslint-config": "*",
     "@babel/core": "^7.19.3",
     "@types/react": "~18.0.28",
     "@types/react-dom": "~18.0.11",
@@ -30,6 +30,7 @@
     "babel-preset-expo": "~9.3.0"
   },
   "eslintConfig": {
+    "extends": "@yubi/eslint-config",
     "ignorePatterns": [
       "node_modules",
       "build",

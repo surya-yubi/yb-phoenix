@@ -1,12 +1,7 @@
 {
-  "compilerOptions": {
-    "outDir": "lib",
-    "module": "esnext",
-    "target": "esnext",
-    "declaration": true,
-    "moduleResolution": "node"
-  },
+  "extends": "../../configs/typescript/tsconfig.dist.json",
   "include": ["src"],
-  "exclude": ["node_modules", "lib"]
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  }
 }
-

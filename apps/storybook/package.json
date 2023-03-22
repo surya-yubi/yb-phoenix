@@ -1,7 +1,7 @@
 {
   "name": "@yubi/storybook",
   "description": "react native storybook 6 and react native web",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,

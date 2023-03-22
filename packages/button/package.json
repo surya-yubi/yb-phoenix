@@ -1,6 +1,6 @@
 {
   "name": "@yubi/button-example",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -16,13 +16,13 @@
     "build": "tsup --clean"
   },
   "devDependencies": {
-    "@yubi/eslint-config": "*",
     "@tsconfig/react-native": "^2.0.3",
     "@tsconfig/recommended": "^1.0.2",
     "@types/jest": "^29.5.0",
     "@types/react": "^18.0.28",
     "@types/react-native": "^0.71.3",
     "@types/react-test-renderer": "^18.0.0",
+    "@yubi/eslint-config": "^2.0.0",
     "jest": "^29.4.3",
     "jest-expo": "^48.0.1",
     "react-test-renderer": "18.2.0",

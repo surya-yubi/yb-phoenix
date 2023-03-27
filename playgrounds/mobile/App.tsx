@@ -1,15 +1,15 @@
-import MyButton from '@yubi/button-example';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import MyButton from "@yubi/button-example";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <MyButton
-        text={'Hello'}
+        text={"Hello"}
         onPress={() => {
-          console.log('hello');
+          console.log("hello");
         }}
       />
     </View>
@@ -19,8 +19,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

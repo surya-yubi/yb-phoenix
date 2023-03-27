@@ -1,4 +1,4 @@
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
 interface MyButtonProps {
   onPress: () => void;
   text: string;
@@ -16,9 +16,9 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 16,
     paddingVertical: 8,
-    backgroundColor: 'violet',
+    backgroundColor: "violet",
   },
-  text: { color: 'black' },
+  text: { color: "black" },
 });
 
 export default MyButton;
